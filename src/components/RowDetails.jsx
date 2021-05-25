@@ -1,15 +1,6 @@
 import React, { useContext } from "react";
 import { RowContext } from "../contexts/RowContext";
 
-// const RowDetails = ({ row }) => {
-//   const { dispatch } = useContext(RowContext);
-//   return (
-//     <ul onClick={() => dispatch({ type: "REMOVE_ROW", id: row.id })}>
-//       <div> {row.name}</div>
-//       <div> {row.email} </div>
-//     </ul>
-//   );
-// };
 
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -36,14 +27,7 @@ const BasicTable=({row})=> {
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            
-            <TableCell align="right">Name</TableCell>
-            <TableCell align="right">Email</TableCell>
-            <TableCell align="right">Action</TableCell>
-          </TableRow>
-        </TableHead>
+         
         <TableBody>
         <TableRow key={row.name}>
               <TableCell component="th" scope="row">
